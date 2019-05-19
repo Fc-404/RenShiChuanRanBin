@@ -1,0 +1,120 @@
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	min-height: 700px;
+	min-width: 1400px;
+	max-height: 1200px;
+	max-width: 2400px;
+}
+
+.font{
+	font: 18px/20px 楷体;
+	text-align: center;
+}
+
+.canvas{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url(img/background-head.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.head-choice{
+	position: relative;
+	direction: inline-block;
+	height: 20px;
+	width: 160px;
+	margin: auto;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0px 0px 10px;
+	background-color: rgba(255,255,255,0.30);
+}
+.head-choice:hover .head{
+	display: block;
+}
+.head{
+	display: none;
+	position: absolute;
+	height: 520px;
+	width: 1024px;
+	top: 20px;
+	left: -432px;
+	box-shadow: 0px 0px 9px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.30);
+	animation: movehead .5s;
+	animation-fill-mode: forwards;
+}
+@keyframes movehead{
+	from{top: -520px;}
+	to{top: 40px;}
+}
+
+.type{
+	position: absolute;
+	height: 80px;
+	width: 400px;
+	bottom: 10px;
+	box-shadow: 0px 0px 9px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.30);
+}
+
+.choice{
+	left: 80px;
+	text-align: center;
+	font: 30px/30px 隶书;
+}
+
+.end{
+	left: 50%;
+	margin-left: -200px;
+	transition-property: height;
+	transition-duration: .5s;
+}
+.end:hover{
+	height: 500px;
+	overflow: hidden;
+}
+.end:hover .copyright{
+	display: none;
+}
+.end:hover .copyright-details{
+	display: block;
+}
+
+.copyright{
+	position: absolute;
+	width: 100%;
+	top: 20px;
+	margin: 0 auto;
+}
+.copyright-details{
+	display: none;
+	height: 100%;
+	width: 360px;
+	padding: 20px;
+}
+.copyright-details img{
+	height: auto;
+	width: 360px;
+	margin: 0;
+}
+
+.about{
+	right: 80px;
+	text-align: center;
+	font: 30px/30px 隶书;
+}

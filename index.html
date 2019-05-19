@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>页面跳转</title>	
+<script type="text/javascript">
+	
+	setTimeout(jump, 3000);					//implement the delay
+	function jump(){				//the jump function to implement client-side judgment
+		if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) {
+			window.location.href="m/index.html";				//jump to specified the html
+		}else{
+			window.location.href="c/index.html";
+		}
+	}
+</script>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	html,body{
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+	}
+	p{
+		text-align: center;
+		font: 24px 隶书;
+	}
+	.location{
+		width: 100%;
+	}
+	.computer{
+		width: 50%;
+		float: right;
+	}
+	.phone{
+		width: 50%;
+		float: left;
+	}
+</style>
+</head>
+
+<body>
+	<p>马上跳转至适应当前客户端的页面呢...<br><br>如果没有跳转到相应页面&nbsp;&nbsp;还请小可爱自己选择呢&nbsp;(｡･ω･｡)</p>
+	<br><hr><br>
+	<div class="location">
+		<div class="phone" onClick="window.location.href='m/index.html';">
+			<p>手机页</p>
+		</div>
+		<div class="computer" onClick="window.location.href='c/index.html';">
+			<p>电脑页</p>
+		</div>
+	</div>
+</body>
+</html>
