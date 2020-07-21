@@ -4,30 +4,62 @@
 <meta charset="utf-8">
 <title>认识传染病</title>
 <link href="index.css" rel="stylesheet" type="text/css">
-<script src="index.js" type="text/javascript"></script>
+<script src="index.js" language="javascript" type="text/javascript"></script>
 </head>
 
 <body>
 	<div class="canvas"><!--画布-->
 		<div class="head-choice font"><!--头部信息-->
-			<strong>首页</strong>
-			<div class="head"><h1 style="text-align: center; font: 80px/128px 隶书;">认识传染病</h1></div>
-		</div>
-		
-		<div class="choice type"><!--选择介绍-->
-			<p class="copyright">传染病介绍</p>
-		</div>
-		
-		<div class="end type font"><!--版权信息-->
-			<p class="copyright">设计版权&nbsp;&copy;&nbsp;2019&nbsp;郭富贵&#44;保留所有权利<br>其他内容如有侵权请联系站主</p>
-			<div class="copyright-details">
-				<img src="img/微信.png" alt="站主微信：m17398643051" title="微信二维码">
-				<p>网页设计版权归属站主，如有雷同，纯属巧合。<br>网站内容大部分来自互联网，如有侵权请联系站主删除！<br>联系方式：2601721443@qq.com</p>
+			<strong>简介</strong>
+			<div class="head">
+				<h1>认识传染病</h1>
+				<p>传染病〔Infectious Diseases〕是由各种病原体引起的能在人与人、动物与动物或人与动物之间相互传播的一类疾病。中国目前的法定报告传染病分为甲、乙、丙3类，共39种。此外，还包括国家卫生计生委决定列入乙类、丙类传染病管理的其他传染病和按照甲类管理开展应急监测报告的其他传染病。</p>
+				<br>
+				<span title="预防传染病三字经">种疫苗&nbsp;强免疫&nbsp;带口罩&nbsp;少聚集&nbsp;勤开窗&nbsp;多通风<br>晒衣被&nbsp;保清洁&nbsp;勤洗手&nbsp;不招菌&nbsp;常锻炼&nbsp;增抗力<br>学有时&nbsp;乐有度&nbsp;多喝水&nbsp;营养丰&nbsp;有病歇&nbsp;须隔离<br>早求医&nbsp;对症治</span>
 			</div>
 		</div>
 		
-		<div class="about type font"><!--关于团队-->
-			<p class="copyright">关于团队</p>
+		
+		<div id="test" class="publicity" title="鼠标移至两边换图" onmouseover="stop()" onmouseout="start()"><!--轮播-->
+			<div id="jumpleft" onClick="jumpleft()" onmouseout="jumpoff()" onmouseover="jumpon()" title="上一张"></div>
+			<div id="jumpright" onClick="jumpright()" onmouseout="jumpoff()" onmouseover="jumpon()" title="下一张"></div>
+			<img class="pic" src="img/pic/xc (1).png" alt="">
+			<img class="pic" src="img/pic/xc (2).png" alt="">
+			<img class="pic" src="img/pic/xc (3).png" alt="">
+			<img class="pic" src="img/pic/xc (4).png" alt="">
+			<img class="pic" src="img/pic/xc (5).png" alt="">
+			<img class="pic" src="img/pic/xc (6).png" alt="">
+			<img class="pic" src="img/pic/xc (7).png" alt="">
+			<img class="pic" src="img/pic/xc (8).png" alt="">
+		</div>
+		
+		<div class="choice type" title="点我点我" onClick="window.location.href='classify/index.html';"><!--选择介绍-->
+			<p class="choiceoff copyright">传染病介绍</p>
+			<p class="choiceon copyright">看看介绍吧</p>
+		</div>
+		
+		<div class="end type font"><!--版权信息-->
+			<p class="copyright">设计版权&nbsp;&copy;&nbsp;2019&nbsp;fc&#44;保留所有权利<br>其他内容如有侵权请联系站主</p>
+			<div class="copyright-details">
+				<img src="img/微信.png" alt="站主微信：m17398643051" title="微信二维码">
+				<p><br>网页设计版权归属站主<br>网站内容大部分来自互联网，如有侵权请联系站主删除！<br>联系方式：<span>2601721443@qq.com</span></p>
+			</div>
+		</div>
+		
+		<div class="about type"><!--关于团队-->
+			<p class="aboutoff copyright">关于团队</p>
+			<div class="abouton backchange" title="长按鼠标左键关闭">
+				<h1>关于团队</h1>
+				<p>我们的团队都是一群计算机新手，在学校举办的网页设计大赛的机遇下，我们三个走到了一起，我们一起讨论，一起工作，一起解决问题。</p>
+				<br>
+				<p>团队虽然刚组建不久，但我们怀揣着远大理想，为了理想，我们一步一步往上爬，不断学习新知识，充实自我，丰富自我，奋力登上计算机领域的山头，为计算机领域的发展添上浓厚一笔。</p>
+				<br>
+				<p>由于目前技术有限，只能做一个相对简单的网站，相信不久的将来，会有更出色的我们。</p>
+				<br><br>
+				<span>八阿哥团队</span>
+				<br><br>
+				<em>队员：达小黑 王富贵 郭秃子</em>
+			</div>
 		</div>
 	</div>
 </body>

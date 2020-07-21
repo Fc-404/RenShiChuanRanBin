@@ -9,10 +9,15 @@
 html,body{
 	height: 100%;
 	width: 100%;
-	min-height: 700px;
-	min-width: 1400px;
+	min-height: 750px;
+	min-width: 1500px;
 	max-height: 1200px;
 	max-width: 2400px;
+	background-image: url(img/background-head.jpg);
+	background-position: center center;	/*居中*/
+	background-repeat: no-repeat;	/*不平铺*/
+	background-size: cover;	/*扩展图像*/
+    user-select: none;	/*不可选择文字*/
 }
 
 .font{
@@ -25,10 +30,6 @@ html,body{
 	padding: 0;
 	height: 100%;
 	width: 100%;
-	background-image: url(img/background-head.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 .head-choice{
@@ -45,31 +46,102 @@ html,body{
 	display: block;
 }
 .head{
+	z-index: 3;
 	display: none;
 	position: absolute;
 	height: 520px;
 	width: 1024px;
-	top: 20px;
-	left: -432px;
+	left: -432px;	/* 居中：（1024-160）/2 px == 432px */
 	box-shadow: 0px 0px 9px;
 	border-radius: 10px;
-	background-color: rgba(255,255,255,0.30);
+	background-color: rgba(255,255,255,0.90);
+	background-size: cover;
+	opacity:0.9;
 	animation: movehead .5s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards;	/*动画完成后暂停*/
 }
-@keyframes movehead{
+@keyframes movehead{	/*动画实现*/
 	from{top: -520px;}
-	to{top: 40px;}
+	to{top: 25px;}
+}
+.head h1{
+	font: 50px/100px 隶书;
+}
+.head p{
+	display: block;
+	width: 900px;
+	left: 50%;
+	margin-left: -450px;
+	text-indent: 2em;
+	text-align: left;
+	text-shadow: 0 0 20px black;
+	font: 30px/40px 隶书;
+}
+.head span{
+	display: block;
+	left: 50%;
+	width: 800px;
+	margin-left: -400px;
+	text-shadow: 0 0 10px #80D2C4;
+	font: 30px/50px 隶书;
+}
+
+.publicity{
+	z-index: 1;
+	position: relative;
+	height: 600px;
+	width: 1200px;
+	left: 50%;
+	margin-left: -600px;
+	top: 50%;
+	margin-top: -360px;
+	background-color: rgba(255,255,255,0.3);
+	border: 2px solid rgba(255,255,255,.5);
+	box-shadow: 0px 0px 10px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.publicity img{
+	z-index: 1;
+	height: 600px;
+	width: 1200px;
+	background-repeat: no-repeat;
+	position: absolute;
+	border-radius: 10px;
+	background-color: white;
+}
+#jumpleft,#jumpright{
+	z-index: 2;
+	display: block;
+	position: absolute;
+	height: 0px;
+	width: 0px;
+	top: 50%;
+	margin-top: -100px;
+}
+#jumpleft{
+	left: -50px;
+	border-width: 100px 50px;
+	border-style: solid;
+	border-color: transparent transparent transparent transparent;
+}
+#jumpright{
+	right: -50px;
+	border-width: 100px 50px;
+	border-style: solid;
+	border-color: transparent transparent transparent transparent;
 }
 
 .type{
+	z-index: 3;
 	position: absolute;
 	height: 80px;
 	width: 400px;
 	bottom: 10px;
 	box-shadow: 0px 0px 9px;
 	border-radius: 10px;
-	background-color: rgba(255,255,255,0.30);
+	background-color: rgba(255,255,255,0.50);
 }
 
 .choice{
@@ -77,16 +149,39 @@ html,body{
 	text-align: center;
 	font: 30px/30px 隶书;
 }
+.choiceon{
+	display: none;
+}
+.choice:hover .choiceon{
+	display: block;
+}
+.choice:hover .choiceoff{
+	display: none;
+}
+.choice:hover{
+	animation: movejump .7s;	
+}
+@keyframes movejump{
+	0%{bottom: 10px;}
+	50%{bottom: 40px;}
+	52%{bottom: 10px;}
+	70%{bottom: 30px;}
+	72%{bottom: 10px;}
+	90%{bottom: 20px;}
+	92%{bottom: 10px;}
+	100%{bottom: 15px;}
+
+}
 
 .end{
 	left: 50%;
 	margin-left: -200px;
-	transition-property: height;
+	transition-property: height;	/*上拉过渡实现*/
 	transition-duration: .5s;
 }
 .end:hover{
 	height: 500px;
-	overflow: hidden;
+	overflow: hidden;	/*溢出不显示*/
 }
 .end:hover .copyright{
 	display: none;
@@ -112,9 +207,65 @@ html,body{
 	width: 360px;
 	margin: 0;
 }
+.copyright-details p span{
+	user-select: text;
+}
 
 .about{
 	right: 80px;
 	text-align: center;
 	font: 30px/30px 隶书;
+	transition: width height;
+	transition-duration: .5s;
+}
+.abouton{
+	height: 100%;
+	width: 100%;
+	display: none;
+	border-radius: 10px;
+	overflow: hidden;
+	text-indent: 2em;
+}
+.abouton h1{
+	font: 50px/100px 隶书;
+}
+.abouton p{
+	display: block;
+	width: 800px;
+	left: 50%;
+	margin-left: -400px;
+}
+.abouton span{
+	float: right;
+	margin-right: 100px;
+}
+.abouton em{
+	float: left;
+}
+.about:hover .abouton{
+	display: block;
+}
+.about:hover .aboutoff{
+	display: none;
+}
+.about:hover{
+	height: 650px;
+	width: 1000px;
+}
+.about:active{
+	height: 80px;
+	width: 400px;
+}
+.backchange{
+	animation: change 10s;
+	animation-direction:alternate;
+	animation-iteration-count:999;
+}
+@keyframes change{
+	0%{background-color: rgba(255,255,255,0.60)}
+	20%{background-color: rgba(128,210,196,0.60)}
+	40%{background-color: rgba(42,154,138,0.60)}
+	60%{background-color: rgba(184,159,56,0.60)}
+	80%{background-color: rgba(133,148,45,0.60)}
+	100%{background-color: rgba(92,65,28,0.60)}
 }

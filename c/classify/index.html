@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>传染病分类</title>
+<link href="index.css" rel="stylesheet" type="text/css"/>
+<script src="index.js" language="javascript" type="text/javascript"></script>
+</head>
+
+<body onload="load();" id="back">
+	<div class="canvas">
+		<div class="classify">
+			<div class="choice">
+				<h2>甲类传染病</h2>
+				<span id="m01" onmouseover="onsp('m01')" onmouseout="offsp('m01')">鼠疫</span>
+				<span id="m02" onmouseover="onsp('m02')" onmouseout="offsp('m02')">霍乱</span>
+				<h2>乙类传染病</h2>
+				<span id="m03" onmouseover="onsp('m03')" onmouseout="offsp('m03')">结核病</span>
+				<span id="m04" onmouseover="onsp('m04')" onmouseout="offsp('m04')">艾滋病</span>
+				<span id="m05" onmouseover="onsp('m05')" onmouseout="offsp('m05')">狂犬病</span>
+				<span id="m06" onmouseover="onsp('m06')" onmouseout="offsp('m06')">百日咳</span>
+				<span id="m07" onmouseover="onsp('m07')" onmouseout="offsp('m07')">炭疽</span>
+				<span id="m08" onmouseover="onsp('m08')" onmouseout="offsp('m08')">病毒性肝炎</span>
+				<span id="m09" onmouseover="onsp('m09')" onmouseout="offsp('m09')">登革热</span>
+				<span id="m10" onmouseover="onsp('m10')" onmouseout="offsp('m10')">新生儿破伤风</span>
+				<span id="m11" onmouseover="onsp('m11')" onmouseout="offsp('m11')">流行性乙型脑炎</span>
+				<span id="m12" onmouseover="onsp('m12')" onmouseout="offsp('m12')">人感染H7N9禽流感</span>
+				<span id="m13" onmouseover="onsp('m13')" onmouseout="offsp('m13')">血吸虫病</span>
+				<span id="m14" onmouseover="onsp('m14')" onmouseout="offsp('m14')">钩端螺旋体病</span>
+				<span id="m15" onmouseover="onsp('m15')" onmouseout="offsp('m15')">梅毒</span>
+				<span id="m16" onmouseover="onsp('m16')" onmouseout="offsp('m16')">淋病</span>
+				<span id="m17" onmouseover="onsp('m17')" onmouseout="offsp('m17')">布鲁氏菌病</span>
+				<span id="m18" onmouseover="onsp('m18')" onmouseout="offsp('m18')">猩红热</span>
+				<span id="m19" onmouseover="onsp('m19')" onmouseout="offsp('m19')">流行性脑脊髓膜炎</span>
+				<span id="m20" onmouseover="onsp('m20')" onmouseout="offsp('m20')">伤寒和副伤寒</span>
+				<span id="m21" onmouseover="onsp('m21')" onmouseout="offsp('m21')">疟疾</span>
+				<span id="m22" onmouseover="onsp('m22')" onmouseout="offsp('m22')">流行性出血热</span>
+				<span id="m23" onmouseover="onsp('m23')" onmouseout="offsp('m23')">麻疹</span>
+				<span id="m24" onmouseover="onsp('m24')" onmouseout="offsp('m24')">人感致命性禽流感</span>
+				<span id="m25" onmouseover="onsp('m25')" onmouseout="offsp('m25')">脊髓灰质炎</span>
+				<span id="m26" onmouseover="onsp('m26')" onmouseout="offsp('m26')">传染性非典型肺炎</span>
+				<span id="m27" onmouseover="onsp('m27')" onmouseout="offsp('m27')">细菌性痢疾</span>
+				<span id="m28" onmouseover="onsp('m28')" onmouseout="offsp('m28')">白喉</span>
+				<h2>丙类传染病</h2>
+				<span id="m29" onmouseover="onsp('m29')" onmouseout="offsp('m29')">感染性腹泻病</span>
+				<span id="m30" onmouseover="onsp('m30')" onmouseout="offsp('m30')">丝虫病</span>
+				<span id="m31" onmouseover="onsp('m31')" onmouseout="offsp('m31')">麻风病</span>
+				<span id="m32" onmouseover="onsp('m32')" onmouseout="offsp('m32')">黑热病</span>
+				<span id="m33" onmouseover="onsp('m33')" onmouseout="offsp('m33')">包虫病</span>
+				<span id="m34" onmouseover="onsp('m34')" onmouseout="offsp('m34')">斑疹伤寒</span>
+				<span id="m35" onmouseover="onsp('m35')" onmouseout="offsp('m35')">急性出血结膜炎</span>
+				<span id="m36" onmouseover="onsp('m36')" onmouseout="offsp('m36')">风疹</span>
+				<span id="m37" onmouseover="onsp('m37')" onmouseout="offsp('m37')">流行性腮腺炎</span>
+				<span id="m38" onmouseover="onsp('m38')" onmouseout="offsp('m38')">流行性感冒</span>
+				<span id="m39" onmouseover="onsp('m39')" onmouseout="offsp('m39')">手足口病</span>
+				<h2>其他传染病</h2>
+				<span id="m40" onmouseover="onsp('m40')" onmouseout="offsp('m40')">寨卡病毒病</span>
+				<span id="m41" onmouseover="onsp('m41')" onmouseout="offsp('m41')">鼻疽和类鼻疽</span>
+				<span id="m42" onmouseover="onsp('m42')" onmouseout="offsp('m42')">人兽共患病</span>
+				<span id="m43" onmouseover="onsp('m43')" onmouseout="offsp('m43')">基孔肯雅热</span>
+				<span id="m44" onmouseover="onsp('m44')" onmouseout="offsp('m44')">广州管圆线虫病</span>
+				<span id="m45" onmouseover="onsp('m45')" onmouseout="offsp('m45')">阿米巴性痢疾</span>
+				<span id="m46" onmouseover="onsp('m46')" onmouseout="offsp('m46')">人猪链球菌感染</span>
+				<span id="m47" onmouseover="onsp('m47')" onmouseout="offsp('m47')">大肠杆菌o104感染</span>
+				<span id="m48" onmouseover="onsp('m48')" onmouseout="offsp('m48')">美洲锥虫病</span>
+				<span id="m49" onmouseover="onsp('m49')" onmouseout="offsp('m49')">诺瓦克样病毒</span>
+				<span id="m50" onmouseover="onsp('m50')" onmouseout="offsp('m50')">颚口线虫病</span>
+				<span id="m51" onmouseover="onsp('m51')" onmouseout="offsp('m51')">西尼罗病毒</span>
+				<span id="m52" onmouseover="onsp('m52')" onmouseout="offsp('m52')">马尔堡出血热</span>
+				<span id="m53" onmouseover="onsp('m53')" onmouseout="offsp('m53')">拉沙热</span>
+				<span id="m54" onmouseover="onsp('m54')" onmouseout="offsp('m54')">黄热病</span>
+				<span id="m55" onmouseover="onsp('m55')" onmouseout="offsp('m55')">裂谷热</span>
+				<span id="m56" onmouseover="onsp('m56')" onmouseout="offsp('m56')">埃博拉出血热</span>
+				<span id="m57" onmouseover="onsp('m57')" onmouseout="offsp('m57')">中东呼吸道综合征</span>
+			</div>
+		</div>
+	
+		<div class="content">
+			<iframe id="InformationSrc" class="information" src="information/01鼠疫.htm" frameborder="0"></iframe>
+		</div>
+		
+		<div class="menu">
+			<img src="../img/菜单.png" alt="菜单" title="菜单"/>
+			<img src="../img/主题.png" alt="主题" title="主题" onClick="ctheme()" id="ttheme"/>
+			<img src="../img/下载.png" alt="下载" title="下载" onClick="download()"/>
+			<img src="../img/主页.png" alt="主页" title="主页" onClick="window.location.href='../index.html';" />
+		</div>
+		
+		<p class="end">以上内容来自百度百科或中国疾控中心</p>
+	</div>
+	<div class="theme" id="theme">
+		<div id="lanbai"  title="蓝白" onmouseover="lanbai()" onmouseout="back()"></div>
+		<div id="tianlan" title="天蓝" onmouseover="tianlan()" onmouseout="back()"></div>
+		<div id="hailan" title="海蓝" onmouseover="hailan()" onmouseout="back()"></div>
+		<div id="qinlv" title="青绿" onmouseover="qinlv()" onmouseout="back()"></div>
+		<div id="fuse" title="肤色" onmouseover="fuse()" onmouseout="back()"></div>
+		<div id="danfen" title="淡粉" onmouseover="danfen()" onmouseout="back()"></div>
+		<div id="danhuang" title="淡黄" onmouseover="danhuang()" onmouseout="back()"></div>
+		<div id="chengse" title="橙色" onmouseover="chengse()" onmouseout="back()"></div>
+		<div id="zongse" title="棕色" onmouseover="zongse()" onmouseout="back()"></div>
+		<div id="huise" title="灰色" onmouseover="huise()" onmouseout="back()"></div>
+		<div id="huibai" title="灰白" onmouseover="huibai()" onmouseout="back()"></div>
+		<div id="baise" title="白色" onmouseover="baise()" onmouseout="back()"></div>
+		<div id="heise" title="黑色" onmouseover="heise()" onmouseout="back()"></div>
+		<div id="close" onClick="closetheme()"><span id="closelogo">▼</span></div>
+	</div>
+</body>	
+</html>

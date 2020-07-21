@@ -1,0 +1,195 @@
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	min-height: 700px;
+	min-width: 1400px;
+	max-height: 1200px;
+	max-width: 2400px;
+	overflow: hidden;
+}
+body{
+	background-image: url("../img/background-head.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	user-select: none;
+}
+
+.canvas{
+	top: 5%;
+	left: 5%;
+	height: 90%;
+	width: 90%;
+}
+
+.classify{
+	position: absolute;
+	height: 100%;
+	width: 29%;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 10px;
+	background-color: rgba(255,255,255,0.40);
+}
+
+.choice{
+	overflow-y: auto;
+	position: absolute;
+	height: 90%;
+	width: 90%;
+	margin: 5%;
+}
+.choice span{
+	text-align: center;
+	font: 18px/28px 宋体;
+	display: inline-block;
+	margin-top: 5px;
+	height: auto;
+	min-height: 28px;
+	width: auto;
+	min-width: 150px;
+	border: 1px solid rgba(255,255,255,0.80);
+}
+/*span:hover{
+	background-color: rgba(255,255,255,0.50);
+	js点击改变背景后css移入效果会失效
+}*/
+
+.content{
+	position: absolute;
+	height: 100%;
+	width: 69%;
+	right: 0;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0px 0px 10px;
+	background-color: rgba(255,255,255,0.30);
+}
+
+.information{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.menu{
+	position: fixed;
+	bottom: 10%;
+	right: 10%;
+	height: 80px;
+	width: 80px;
+	background-color: rgba(255,255,255,.5);
+	background-repeat: no-repeat;
+	border: 1px solid rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px;
+	border-radius: 50px;
+	transition-property: height;	/*上拉过渡实现*/
+	transition-duration: .5s;
+	overflow: hidden;	/*溢出不显示*/
+}
+.menu:hover{
+	height: 335px;
+	
+}
+
+.end{
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: -30px;
+	text-shadow: 0px 0px 10px;
+	font-family: 楷体;
+}
+
+.theme{
+	position: absolute;
+	display: none;
+	width: 710px;
+	height: 50px;
+	left: 50%;
+	margin-left: -355px;
+	bottom: 0;
+	border-radius: 10px 10px 0px 0px;
+	box-shadow: 0px 0px 10px;
+	background-color: rgba(255,255,255,0.30);
+	animation: movetheme .5s;
+	animation-fill-mode: forwards;	/*动画完成后暂停*/
+}
+@keyframes movetheme{
+	from{bottom: -50px}
+	to{bottom: 0px}
+}
+.theme div{
+	display: inline-block;
+	margin: 0;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px;
+}
+#close{
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.3);
+	top: -25px;
+	left: 50%;
+	margin-left: -5px;
+	text-align: center;
+	overflow: hidden;
+}
+#closelogo{
+	display: none;
+}
+#close:hover #closelogo{
+	display: block;
+	background-color: rgba(0,0,0,0.50);
+}
+#lanbai{
+	background-color: #9CBCD8;
+}
+#tianlan{
+	background-color: #87cefa;
+}
+#hailan{
+	background-color: #00f;
+}
+#qinlv{
+	background-color: #0f0;
+}
+#fuse{
+	background-color: #ffdbb1;
+}
+#danfen{
+	background-color: #ffb6c1;
+}
+#danhuang{
+	background-color: #ffd700;
+}
+#chengse{
+	background-color: #ff4500;
+}
+#zongse{
+	background-color: #cd853f;
+}
+#huise{
+	background-color: #3D3D3D;
+}
+#huibai{
+	background-color: #8a8a8a;
+}
+#baise{
+	background-color: #fff;
+}
+#heise{
+	background-color: #000;
+}
